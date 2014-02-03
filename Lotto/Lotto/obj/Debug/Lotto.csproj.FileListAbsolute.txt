@@ -28,3 +28,5 @@ C:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\System.Web.WebPages.Raz
 C:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\obj\Debug\Lotto.csprojResolveAssemblyReference.cache
 C:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\obj\Debug\Lotto.dll
 C:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\obj\Debug\Lotto.pdb
+C:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\EntityFramework.SqlServer.dll
+C:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\EntityFramework.SqlServer.xml
