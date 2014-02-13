@@ -27,11 +27,11 @@
         return value.replace(/([!"#$%&'()*+,./:;<=>?@\[\\\]^`{|}~])/g, "\\$1");
     }
 
-    function getModelPrefix(fieldName) {
+    function getuserPrefix(fieldName) {
         return fieldName.substr(0, fieldName.lastIndexOf(".") + 1);
     }
 
-    function appendModelPrefix(value, prefix) {
+    function appenduserPrefix(value, prefix) {
         if (value.indexOf("*.") === 0) {
             value = value.replace("*.", prefix);
         }
@@ -317,9 +317,9 @@
     adapters.addBool("creditcard").addBool("date").addBool("digits").addBool("email").addBool("number").addBool("url");
     adapters.addMinMax("length", "minlength", "maxlength", "rangelength").addMinMax("range", "min", "max", "range");
     adapters.add("equalto", ["other"], function (options) {
-        var prefix = getModelPrefix(options.element.name),
+        var prefix = getuserPrefix(options.element.name),
             other = options.params.other,
-            fullOtherName = appendModelPrefix(other, prefix),
+            fullOtherName = appenduserPrefix(other, prefix),
             element = $(options.form).find(":input[name='" + escapeAttributeValue(fullOtherName) + "']")[0];
 
         setValidationValues(options, "equalTo", element);
@@ -336,10 +336,10 @@
             type: options.params.type || "GET",
             data: {}
         },
-            prefix = getModelPrefix(options.element.name);
+            prefix = getuserPrefix(options.element.name);
 
         $.each(splitAndTrim(options.params.additionalfields || options.element.name), function (i, fieldName) {
-            var paramName = appendModelPrefix(fieldName, prefix);
+            var paramName = appenduserPrefix(fieldName, prefix);
             value.data[paramName] = function () {
                 return $(options.form).find(":input[name='" + escapeAttributeValue(paramName) + "']").val();
             };

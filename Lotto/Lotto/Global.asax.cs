@@ -17,6 +17,8 @@ namespace Lotto
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+            
+            DependencyResolver.SetResolver(new Lotto.Infrastructure.NinjectDependecyResolver());
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

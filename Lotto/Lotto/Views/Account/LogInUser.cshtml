@@ -1,0 +1,14 @@
+﻿@model  Lotto.Models.User
+@{
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+    ViewBag.Title = "Lotto statistic";
+}
+
+@Html.ValidationMessage("LoginUser")
+
+@using (Html.BeginForm())
+{        
+    @Html.EditorForModel()        
+    <input type="submit" value="ok" />
+}
+@Html.ActionLink("Register", "RegisterUser")

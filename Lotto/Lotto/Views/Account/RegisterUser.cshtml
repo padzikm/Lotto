@@ -1,0 +1,13 @@
+﻿@model Lotto.Models.User
+@{
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+    ViewBag.Title = "RegisterUser";
+}
+
+@Html.ValidationMessage("RegisterUser")
+
+@using(Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input type="submit" value="send" />
+}

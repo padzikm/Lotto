@@ -1,0 +1,10 @@
+﻿<div class="list-group">
+    <a href="#" class="list-group-item active">Rejestruj</a>
+    <a href="#" class="list-group-item">Loguj</a>
+    <a href="#" class="list-group-item">Morbi leo risus</a>
+    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+    <a href="#" class="list-group-item">Vestibulum at eros</a>
+    @Html.ActionLink("Wyloguj", "Logout", "Account", new { category = "popo" }, new { @class = "list-group-item" })
+    @Html.ActionLink("Rejestruj", "RegisterUser", "Account", new { category = "popo" }, new { @class = "list-group-item" })
+    @Html.ActionLink("Zaloguj", "LogInUser", "Account", null, new { @class = ViewBag.SelectedCategory != null ? "list-group-item active" : "list-group-item" })    
+</div>

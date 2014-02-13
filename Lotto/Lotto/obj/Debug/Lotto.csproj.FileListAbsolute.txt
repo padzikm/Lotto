@@ -30,3 +30,6 @@ C:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\obj\Debug\Lotto.dll
 C:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\obj\Debug\Lotto.pdb
 C:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\EntityFramework.SqlServer.dll
 C:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\EntityFramework.SqlServer.xml
+c:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\Ninject.dll
+c:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\Ninject.pdb
+c:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\Ninject.xml
