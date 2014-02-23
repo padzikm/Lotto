@@ -10,14 +10,14 @@ namespace Lotto.Controllers
     {        
         public PartialViewResult Menu(string category = null)
         {
-            ViewBag.SelectedCategory = category;
+            //ViewBag.SelectedCategory = category;
 
             return PartialView();
         }
 
         public PartialViewResult AdminMenu(string category = null)
         {
-            ViewBag.SelectedCategory = category;
+            //ViewBag.SelectedCategory = category;
 
             return PartialView();
         }

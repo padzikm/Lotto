@@ -46,6 +46,9 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
@@ -143,8 +146,12 @@
     <Compile Include="Infrastructure\Abstract\IAuthProvider.cs" />
     <Compile Include="Infrastructure\Abstract\IStatisticRepository.cs" />
     <Compile Include="Infrastructure\Abstract\IUserRepository.cs" />
+    <Compile Include="Infrastructure\Concrete\StatisticRepository.cs" />
     <Compile Include="Infrastructure\NinjectDependecyResolver.cs" />
     <Compile Include="Infrastructure\Concrete\UserRepository.cs" />
+    <Compile Include="Models\LuckyNumber.cs" />
+    <Compile Include="Models\Statistic.cs" />
+    <Compile Include="Models\StatisticViewModel.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -252,6 +259,17 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Navigation\AdminMenu.cshtml" />
+    <Content Include="Views\Admin\VerifyUsers.cshtml" />
+    <Content Include="Views\Admin\AddLottoResultManually.cshtml" />
+    <Content Include="Views\Admin\AddLottoResultAuto.cshtml" />
+    <Content Include="Views\Lotto\BasicStatistics.cshtml" />
+    <Content Include="Views\Lotto\BasicStatisticsResults.cshtml" />
+    <Content Include="Views\Lotto\AllNumbersStatistics.cshtml" />
+    <Content Include="Views\Lotto\AllNumbersStatisticsResults.cshtml" />
+    <Content Include="Views\Lotto\BestNumbersStatistics.cshtml" />
+    <Content Include="Views\Lotto\BestNumbersStatisticsResults.cshtml" />
+    <Content Include="Views\Lotto\WorstNumbersStatistics.cshtml" />
+    <Content Include="Views\Lotto\WorstNumbersStatisticsResults.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

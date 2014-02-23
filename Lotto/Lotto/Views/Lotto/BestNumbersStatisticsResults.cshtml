@@ -1,0 +1,21 @@
+﻿@model IEnumerable<KeyValuePair<int, int>>
+@{
+    ViewBag.Title = "BestNumbersStatisticsResults";
+}
+
+<h2>BestNumbersStatisticsResults</h2>
+
+<table>
+    <thead>
+        <tr><th>Liczba</th><th>Ilosc</th></tr>
+    </thead>
+    <tbody>
+        @foreach(var pair in Model)
+        {
+            <tr>
+                <td>@(pair.Key + 1)</td>
+                <td>@pair.Value</td>
+            </tr>
+        }
+    </tbody>
+</table>

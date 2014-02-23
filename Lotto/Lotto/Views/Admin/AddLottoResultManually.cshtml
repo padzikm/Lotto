@@ -1,0 +1,23 @@
+﻿@model Lotto.Models.Statistic
+@{
+    ViewBag.Title = "AddLottoResultManually";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AddLottoResultManually</h2>
+
+@using (Html.BeginForm())
+{    
+    @Html.LabelFor(p => p.LuckyNumbers)
+    <br />
+    for(int i = 0; i < 6; ++i)
+    {
+        @Html.EditorFor(p => p.LuckyNumbers[i])
+    }
+    <br />
+    @Html.LabelFor(p => p.Date)
+    <br />
+    @Html.TextBoxFor(p => p.Date, new {@class = "datepicker"})
+    <br />    
+    <input type="submit" value="Dodaj" />
+}

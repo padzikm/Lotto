@@ -1,0 +1,17 @@
+﻿@model Lotto.Models.StatisticViewModel
+@{
+    ViewBag.Title = "BasicStatistics";
+}
+
+<h2>Pick start and end date</h2>
+
+@using(Html.BeginForm())
+{
+    @Html.LabelFor(p => p.StartDate)    
+    @Html.TextBoxFor(p => p.StartDate, new {@class = "datepicker"})
+    <br />
+    @Html.LabelFor(p => p.EndDate)    
+    @Html.TextBoxFor(p => p.EndDate, new {@class = "datepicker"})
+    <br />
+    <input type="submit" value="Wyslij" />
+}

@@ -1,0 +1,20 @@
+﻿@model Lotto.Models.StatisticViewModel
+@{
+    ViewBag.Title = "WorstNumbersStatistics";
+}
+
+<h2>WorstNumbersStatistics</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(p => p.StartDate)
+    @Html.TextBoxFor(p => p.StartDate, new { @class = "datepicker" })
+    <br />
+    @Html.LabelFor(p => p.EndDate)
+    @Html.TextBoxFor(p => p.EndDate, new { @class = "datepicker" })
+    <br />
+    @Html.LabelFor(p => p.NumbersCount)
+    @Html.EditorFor(p => p.NumbersCount)
+    <br />
+    <input type="submit" value="Wyslij" />
+}

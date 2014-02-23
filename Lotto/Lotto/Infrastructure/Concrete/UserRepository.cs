@@ -35,5 +35,44 @@ namespace Lotto.Infrastructure
 
             return (user != null && user.IsAdmin);
         }
+
+
+        public IEnumerable<User> GetAllInActiveUsers()
+        {
+            return dbContext.Users.Where(p => !p.IsActive).ToList();
+        }
+
+        public bool SaveUser(User user)
+        {
+            User modifiedUser = dbContext.Users.FirstOrDefault(p => p.UserID == user.UserID);
+
+            modifiedUser.Name = user.Name;
+            modifiedUser.Password = user.Password;
+            modifiedUser.IsActive = user.IsActive;
+            modifiedUser.IsAdmin = user.IsAdmin;
+            
+            dbContext.SaveChanges();
+
+            return true;
+        }
+
+
+        public User GetUser(int userID)
+        {
+            return dbContext.Users.FirstOrDefault(p => p.UserID == userID);
+        }
+
+
+        public bool DeleteUser(int userID)
+        {
+            User user = dbContext.Users.FirstOrDefault(p => p.UserID == userID);
+            
+            if(user != null)
+                dbContext.Users.Remove(user);
+
+            dbContext.SaveChanges();
+
+            return true;
+        }
     }
 }

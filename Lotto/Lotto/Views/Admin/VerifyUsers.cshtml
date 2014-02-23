@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Lotto.Models.User>
+@{
+    ViewBag.Title = "VerifyUsers";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>VerifyUsers</h2>
+
+<table>
+    <thead>
+        <tr>
+            <td>Login</td>
+            <td>Zatwierdz</td>
+            <td>Usun</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Lotto.Models.User user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@Html.ActionLink("Zatwierdz", "ActivateUser", new {userID = user.UserID})</td>
+                <td>@Html.ActionLink("Usun", "DeleteUser", new {userID = user.UserID})</td>
+            </tr>
+        }
+    </tbody>
+</table>

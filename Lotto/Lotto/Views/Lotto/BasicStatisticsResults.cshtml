@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Lotto.Models.Statistic>
+@{
+    ViewBag.Title = "BasicStatisticsResult";
+}
+
+<h2>BasicStatisticsResult</h2>
+
+<table>
+    <thead>
+        <tr><th>Data</th><th>Wyniki</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var stat in Model)
+        {
+            <tr>
+                <td>@stat.Date</td>
+                @{string numbersList = "";}
+                @foreach (var number in stat.LuckyNumbers)
+                {
+                    if (number.Value != null)
+                    {
+                        numbersList += number.Value.ToString() + ",";
+                    }
+                }
+                <td>
+                    @numbersList
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

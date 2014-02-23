@@ -11,6 +11,10 @@ namespace Lotto.Infrastructure
     {
         bool AddUser(string name, string password);
         User GetUser(string name, string password);
+        User GetUser(int userID);
+        IEnumerable<User> GetAllInActiveUsers();
         bool IsAdmin(string name, string password);
+        bool SaveUser(User user);
+        bool DeleteUser(int userID);
     }
 }

@@ -13,10 +13,12 @@ namespace Lotto.Database
     public class LottoDbContext : DbContext
     {
         public DbSet<User> Users { get; set; }
+        public DbSet<Statistic> Statistics { get; set; }
 
         public LottoDbContext()
         {
             System.Data.Entity.Database.SetInitializer(new DropCreateDatabaseIfModelChanges<LottoDbContext>());
+            //this.Configuration.LazyLoadingEnabled = false; 
         }
     }
 }

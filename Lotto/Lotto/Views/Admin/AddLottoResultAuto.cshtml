@@ -1,0 +1,17 @@
+﻿@model DateTime
+@{
+    ViewBag.Title = "AddLottoResultAuto";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AddLottoResultAuto</h2>
+
+
+@using (Html.BeginForm())
+{    
+    @Html.LabelFor(p => p.Date)
+    <br />
+    @Html.TextBoxFor(p => p.Date, new { @class = "datepicker"})
+    <br />
+    <input type="submit" value="Dodaj" />
+}

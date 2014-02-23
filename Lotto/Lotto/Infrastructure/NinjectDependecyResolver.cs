@@ -33,6 +33,7 @@ namespace Lotto.Infrastructure
         {
             kernel.Bind<IUserRepository>().To<UserRepository>();
             kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
+            kernel.Bind<IStatisticRepository>().To<StatisticRepository>();
         }
     }
 }

@@ -33,3 +33,7 @@ C:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\EntityFramework.SqlServ
 c:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\Ninject.dll
 c:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\Ninject.pdb
 c:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\Ninject.xml
+c:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\HtmlAgilityPack.dll
+c:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\HtmlAgilityPack.pdb
+c:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\HtmlAgilityPack.xml
+C:\Users\Michal\Documents\Projects\Lotto\Lotto\Lotto\bin\Lotto.dll.config
